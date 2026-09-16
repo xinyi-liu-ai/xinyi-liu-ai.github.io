@@ -6,7 +6,7 @@ subtitle: Second-year PhD Student in Computer Science at Northeastern University
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: xinyi-profile.jpg
   image_circular: true # crops the image to make it circular
   more_info: >
     <p>Boston, MA</p>
