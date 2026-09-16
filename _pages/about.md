@@ -19,12 +19,12 @@ announcements:
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
+  enabled: false
+  scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a second-year PhD student in Computer Science at **Northeastern University**, advised by [Prof. David A. Smith](https://www.ccs.neu.edu/home/dasmith/), and a recipient of the Khoury College Distinguished Fellowship..
+I am a second-year PhD student in Computer Science at **Northeastern University**, advised by [Prof. David A. Smith](https://www.ccs.neu.edu/home/dasmith/).
 
 My research broadly focuses on **LLM and agent evaluation, alignment and AI safety, human–AI interaction, and social computing**. I am particularly interested in how AI systems can remain reliable and aligned with human goals, values, and agency over extended interactions.
 
