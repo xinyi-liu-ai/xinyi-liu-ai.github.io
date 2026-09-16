@@ -27,8 +27,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am a second-year PhD student in Computer Science at [Northeastern University](https://www.northeastern.edu/), advised by [Prof. David A. Smith](https://www.ccs.neu.edu/home/dasmith/).
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My research broadly focuses on **LLM and agent evaluation, alignment and AI safety, human–AI interaction, and social computing**. I am particularly interested in how AI systems can remain reliable and aligned with human goals, values, and agency over extended interactions.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Previously, I conducted research at [Microsoft Research](https://www.microsoft.com/en-us/research/) in the Social Computing group and at [Harvard Medical School](https://hms.harvard.edu/) in the [HIDIVE Lab](https://hidivelab.org/). I received my M.S. from [The University of Texas at Austin](https://www.utexas.edu/) and my B.S. in Computer Science and Economics from the [University of Maryland, College Park](https://www.umd.edu/), where I worked with [Prof. Zhicheng Liu](https://zcliu.cs.umd.edu/) and [Hannah Bako](https://hannahbako.com/).
