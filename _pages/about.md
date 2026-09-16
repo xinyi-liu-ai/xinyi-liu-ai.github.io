@@ -2,16 +2,14 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Second-year PhD Student in Computer Science at Northeastern University
 
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: true # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Boston, MA</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,7 +25,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a second-year PhD student in Computer Science at [Northeastern University](https://www.northeastern.edu/), advised by [Prof. David A. Smith](https://www.ccs.neu.edu/home/dasmith/).
+I am a second-year PhD student in Computer Science at [Northeastern University](https://www.northeastern.edu/), advised by [Prof. David A. Smith](https://www.ccs.neu.edu/home/dasmith/), and a recipient of the Khoury College Distinguished Fellowship..
 
 My research broadly focuses on **LLM and agent evaluation, alignment and AI safety, human–AI interaction, and social computing**. I am particularly interested in how AI systems can remain reliable and aligned with human goals, values, and agency over extended interactions.
 
