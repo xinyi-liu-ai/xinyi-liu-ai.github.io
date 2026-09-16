@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Second-year PhD Student in Computer Science at Northeastern University
+subtitle: 
 
 profile:
   align: right
