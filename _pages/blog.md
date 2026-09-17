@@ -1,6 +1,6 @@
 ---
 layout: page
-title: life
+title: Life
 permalink: /life/
 nav: true
 nav_order: 3
