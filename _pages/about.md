@@ -24,10 +24,6 @@ latest_posts:
 
 I am a second-year PhD student in Computer Science at **Northeastern University**, advised by [Prof. David A. Smith](https://www.ccs.neu.edu/home/dasmith/).
 
-<p style="color: var(--global-text-color); font-size: 1.02rem; font-weight: 500; margin-top: -0.35rem; margin-bottom: 1.25rem;">
-LLM & Agent Evaluation&nbsp;&nbsp;·&nbsp;&nbsp;Alignment & AI Safety&nbsp;&nbsp;·&nbsp;&nbsp;Human–AI Interaction
-</p>
-
 My research focuses on **evaluating and aligning LLMs and AI agents**, particularly how their reasoning, behavior, and interactions with humans remain consistent with human goals and agency. I am broadly interested in **LLM/agent evaluation, alignment and AI safety, structured reasoning and information extraction, and human–AI interaction**.
 
 Previously, I conducted research at **Microsoft Research** in the Social Computing group and at **Harvard Medical School** in the [HIDIVE Lab](https://hidivelab.org/team/members/xinyi-liu/), where I was advised by [Prof. Nils Gehlenborg](https://dbmi.hms.harvard.edu/people/nils-gehlenborg). I received my M.S. from **The University of Texas at Austin** and my B.S. in Computer Science and Economics from the **University of Maryland, College Park**, where I worked with [Prof. Zhicheng Liu](https://zcliu.cs.umd.edu/) and [Prof. Hannah Bako](https://hannahbako.com/).
@@ -36,15 +32,15 @@ Previously, I conducted research at **Microsoft Research** in the Social Computi
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.8rem; margin: 0.9rem 0 1.8rem 0;">
   <div style="border: 1px solid var(--global-divider-color); border-radius: 10px; padding: 0.95rem 1rem;">
-    <strong>LLM & Agent Evaluation</strong>
+    <strong style="font-weight: 700;">LLM & Agent Evaluation</strong>
     <div style="margin-top: 0.35rem;">Evaluating consistency, structural reasoning, and failure modes across increasingly agentic settings.</div>
   </div>
   <div style="border: 1px solid var(--global-divider-color); border-radius: 10px; padding: 0.95rem 1rem;">
-    <strong>Alignment & Human Agency</strong>
+    <strong style="font-weight: 700;">Alignment & Human Agency</strong>
     <div style="margin-top: 0.35rem;">Studying when AI systems and AI-mediated environments support or conflict with human goals, wellbeing, and agency.</div>
   </div>
   <div style="border: 1px solid var(--global-divider-color); border-radius: 10px; padding: 0.95rem 1rem;">
-    <strong>Structured Language Understanding</strong>
+    <strong style="font-weight: 700;">Structured Language Understanding</strong>
     <div style="margin-top: 0.35rem;">Extracting and evaluating complex relational structures from natural language.</div>
   </div>
 </div>
