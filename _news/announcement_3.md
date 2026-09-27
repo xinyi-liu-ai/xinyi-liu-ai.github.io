@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Awarded as a Super Reviewer for ACM CHI 2025.
+Awarded as a **Super Reviewer** for ACM CHI 2025.
