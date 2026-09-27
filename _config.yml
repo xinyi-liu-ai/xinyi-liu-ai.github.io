@@ -6,8 +6,7 @@ title: Xinyi Liu # the website title (if blank, full name will be used instead)
 first_name: Xinyi
 middle_name: 
 last_name: Liu
-contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+contact_note:
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Xinyi Liu is a Computer Science PhD student at Northeastern University working on LLM and agent evaluation, alignment, AI safety, structured language understanding, and human-AI interaction.
 footer_text: >
