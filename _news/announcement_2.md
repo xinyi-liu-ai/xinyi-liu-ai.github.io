@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Served as an Associate Chair for ACM Creativity & Cognition 2025.
+Served as an **Associate Chair** for ACM Creativity & Cognition 2025.
