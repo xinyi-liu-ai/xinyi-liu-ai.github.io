@@ -36,6 +36,8 @@ Previously, I conducted research at **Microsoft Research** in the Social Computi
 
 ## Open to Collaboration
 
-I enjoy interdisciplinary research and am open to conversations across AI, NLP, human-centered computing, social science, visualization, and related areas.
+<p style="color: #c62828; font-weight: 650;">
+Our lab is currently open to <strong>visiting students</strong> and <strong>remote research opportunities for undergraduate and master's students</strong>. I am also happy to discuss research collaborations with <strong>PhD students, academic researchers, and industry researchers</strong>.
+</p>
 
-If you are interested in collaborating, have a research idea you would like to discuss, or are an undergraduate or master's student hoping to gain research experience, feel free to reach out by [email](mailto:liu.xinyi10@northeastern.edu). I am especially happy to hear from people who are curious, thoughtful, and excited to learn, even if your background is different from mine.
+If you are interested in joining, collaborating, or discussing a research idea, feel free to reach out by [email](mailto:liu.xinyi10@northeastern.edu).
