@@ -24,7 +24,7 @@ latest_posts:
 
 I am a second-year PhD student in Computer Science at **Northeastern University**, advised by [Prof. David A. Smith](https://www.ccs.neu.edu/home/dasmith/).
 
-<p style="color: var(--global-text-color-light); font-size: 1.02rem; margin-top: -0.35rem; margin-bottom: 1.25rem;">
+<p style="color: var(--global-text-color); font-size: 1.02rem; font-weight: 500; margin-top: -0.35rem; margin-bottom: 1.25rem;">
 LLM & Agent Evaluation&nbsp;&nbsp;·&nbsp;&nbsp;Alignment & AI Safety&nbsp;&nbsp;·&nbsp;&nbsp;Human–AI Interaction
 </p>
 
@@ -36,15 +36,15 @@ Previously, I conducted research at **Microsoft Research** in the Social Computi
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.8rem; margin: 0.9rem 0 1.8rem 0;">
   <div style="border: 1px solid var(--global-divider-color); border-radius: 10px; padding: 0.95rem 1rem;">
-    <strong style="color: var(--global-theme-color);">LLM & Agent Evaluation</strong>
+    <strong>LLM & Agent Evaluation</strong>
     <div style="margin-top: 0.35rem;">Evaluating consistency, structural reasoning, and failure modes across increasingly agentic settings.</div>
   </div>
   <div style="border: 1px solid var(--global-divider-color); border-radius: 10px; padding: 0.95rem 1rem;">
-    <strong style="color: var(--global-theme-color);">Alignment & Human Agency</strong>
+    <strong>Alignment & Human Agency</strong>
     <div style="margin-top: 0.35rem;">Studying when AI systems and AI-mediated environments support or conflict with human goals, wellbeing, and agency.</div>
   </div>
   <div style="border: 1px solid var(--global-divider-color); border-radius: 10px; padding: 0.95rem 1rem;">
-    <strong style="color: var(--global-theme-color);">Structured Language Understanding</strong>
+    <strong>Structured Language Understanding</strong>
     <div style="margin-top: 0.35rem;">Extracting and evaluating complex relational structures from natural language.</div>
   </div>
 </div>
