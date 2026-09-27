@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Started serving as a Teaching Assistant for **CS 7170** at Northeastern University.
+Serving as a Teaching Assistant for **CS 7170** at Northeastern University for Fall 2026.
