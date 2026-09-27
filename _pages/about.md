@@ -36,8 +36,8 @@ Previously, I conducted research at **Microsoft Research** in the Social Computi
 
 ## Open to Collaboration
 
-<p style="color: #2F6F73;">
-Our lab is currently open to <strong>visiting students</strong> and <strong>remote research opportunities for undergraduate and master's students</strong>. I am also happy to discuss research collaborations with <strong>PhD students, academic researchers, and industry researchers</strong>.
+<p>
+Our lab is currently open to <strong style="color: var(--global-theme-color);">visiting students</strong> and <strong style="color: var(--global-theme-color);">remote research opportunities for undergraduate and master's students</strong>. I am also happy to discuss research collaborations with <strong style="color: var(--global-theme-color);">PhD students, academic researchers, and industry researchers</strong>.
 </p>
 
 If you are interested in joining, collaborating, or discussing a research idea, feel free to reach out by [email](mailto:liu.xinyi10@northeastern.edu).
