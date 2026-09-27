@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Serving as a Teaching Assistant for **CS 7170** at Northeastern University for Fall 2026.
+Serving as a Teaching Assistant for CS 7170: Seminar in AI at Northeastern University for Fall 2026.
