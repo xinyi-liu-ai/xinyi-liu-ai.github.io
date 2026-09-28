@@ -18,25 +18,25 @@ nav_order: 3
 .life-book .life-section-head h2{font-size:1.4rem;font-weight:700;margin:0}
 .life-book .life-hint{font-size:.82rem;opacity:.7;margin:0}
 .life-book .life-garden{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.1rem;align-items:start}
-.life-book .life-card{border:1px solid #dce5e6;border-radius:17px;background:var(--paper);color:var(--life-ink);box-shadow:0 3px 0 #34475608;transition:transform .18s ease,box-shadow .18s ease;overflow:hidden}
-.life-book .life-card:nth-child(3n+2){margin-top:1rem}
-.life-book .life-card summary{cursor:pointer;list-style:none;padding:1.15rem;position:relative}
+.life-book .life-card{border:0;border-radius:0;background:transparent;color:var(--life-ink);box-shadow:none;transition:transform .18s ease,box-shadow .18s ease;overflow:hidden}
+.life-book .life-card:nth-child(3n+2){margin-top:0}
+.life-book .life-card summary{cursor:pointer;list-style:none;padding:0 0 .65rem;position:relative}
 .life-book .life-card summary::-webkit-details-marker{display:none}
 .life-book .life-card summary:focus-visible{outline:3px solid #3a95d0;outline-offset:-4px;border-radius:17px}
 .life-book .life-card summary:after{content:"+";position:absolute;right:1rem;bottom:1.1rem;font-size:1.2rem;color:#527b92}
 .life-book .life-card[open] summary:after{content:"−"}
-.life-book .life-card-image{width:100%;aspect-ratio:1/1;display:block;object-fit:contain;object-position:center;border-radius:12px;margin:.05rem 0 .85rem;background:#fffaf2}
+.life-book .life-card-image{width:100%;height:auto;aspect-ratio:1/1;display:block;object-fit:contain;object-position:center;border:0;border-radius:0;margin:0 0 .65rem;background:transparent}
 .life-book .card-note{display:block;font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;color:var(--life-muted);margin-bottom:.35rem}
 .life-book .card-title{display:block;font-size:1.02rem;font-weight:700;padding-right:1rem}
-.life-book .card-story{font-size:.93rem;line-height:1.7;padding:0 1.15rem 1.2rem;margin:0}
+.life-book .card-story{font-size:.93rem;line-height:1.7;padding:0 0 1rem;margin:0}
 .life-book .life-note{position:relative;border:1px solid var(--global-divider-color);border-radius:14px;margin:2.5rem 0 1rem;padding:1.6rem 1.8rem}
 .life-book .life-note:before{content:"";position:absolute;width:75px;height:20px;background:#e9cb8580;top:-10px;left:35px;transform:rotate(-4deg)}
 .life-book .life-note h2{font-size:1.15rem;font-weight:700;margin:0 0 .75rem}
 .life-book .life-note p{line-height:1.75;margin:0 0 .75rem}
 .life-book .curiosity-tags{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1rem}
 .life-book .curiosity-tags span{border:1px solid var(--global-divider-color);border-radius:30px;padding:.3rem .7rem;font-size:.78rem}
-@media(hover:hover){.life-book .life-card:hover{transform:translateY(-4px);box-shadow:0 7px 15px #34475610}}
-@media(max-width:650px){.life-book .life-cover{grid-template-columns:1fr;padding:1.5rem}.life-book .cover-art{max-width:210px}.life-book .life-garden{grid-template-columns:repeat(2,minmax(0,1fr))}.life-book .life-card:nth-child(3n+2){margin-top:0}.life-book .life-section-head{display:block}.life-book .life-hint{margin-top:.5rem}.life-book .life-card summary{padding:.9rem}.life-book .card-title{font-size:.95rem}}
+@media(hover:hover){.life-book .life-card:hover{transform:translateY(-4px);box-shadow:none}}
+@media(max-width:650px){.life-book .life-cover{grid-template-columns:1fr;padding:1.5rem}.life-book .cover-art{max-width:210px}.life-book .life-garden{grid-template-columns:repeat(2,minmax(0,1fr))}.life-book .life-card:nth-child(3n+2){margin-top:0}.life-book .life-section-head{display:block}.life-book .life-hint{margin-top:.5rem}.life-book .life-card summary{padding:0 0 .65rem}.life-book .card-title{font-size:.95rem}}
 @media(max-width:360px){.life-book .life-garden{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.life-book .life-card{transition:none}.life-book .life-card:hover{transform:none}}
 
