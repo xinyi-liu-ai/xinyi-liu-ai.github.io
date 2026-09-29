@@ -24,8 +24,9 @@ function openWorld(key,scroll=true){
  $('life-world').hidden=close;if(close)return;
  const card=cards.find(c=>c.dataset.world===key);$('world-title').textContent=card.querySelector('.life-title').textContent;
  $('world-intro').textContent=key==='dance'?'Different ways I’ve learned to move, perform, and sometimes simply be still.':summaries[key];
- $('dance-world').hidden=key!=='dance';$('animals-world').hidden=key!=='animals';$('simple-world').hidden=true;
+ $('dance-world').hidden=key!=='dance';$('animals-world').hidden=key!=='animals';$('astronomy-world').hidden=key!=='astronomy';$('simple-world').hidden=true;
  if(key==='animals'){$('world-title').textContent='Elephants & Pandas';$('world-intro').textContent='';}
+ if(key==='astronomy')$('world-intro').textContent='Looking up, learning the sky, and collecting tiny reasons to feel small.';
  if(key==='dance')chapter(current);
  if(scroll){$('life-world').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});$('life-world').focus({preventScroll:true})}
 }
@@ -38,5 +39,7 @@ $('dance-overview-toggle').addEventListener('click',()=>{const open=$('dance-ove
 root.querySelectorAll('[data-jump]').forEach(b=>b.addEventListener('click',()=>{chapter(Number(b.dataset.jump));$('dance-overview').hidden=true;$('dance-overview-toggle').setAttribute('aria-expanded','false');$('dance-overview-toggle').textContent='view all six';$('dance-chapter').focus({preventScroll:true})}));
 if(location.hash==='#dance')openWorld('dance',false);
 if(location.hash==='#animals')openWorld('animals',false);
+if(location.hash==='#astronomy')openWorld('astronomy',false);
 })();
+
 
