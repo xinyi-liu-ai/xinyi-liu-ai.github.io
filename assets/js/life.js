@@ -24,7 +24,7 @@ function openWorld(key,scroll=true){
  $('life-world').hidden=close;if(close)return;
  const card=cards.find(c=>c.dataset.world===key);$('world-title').textContent=card.querySelector('.life-title').textContent;
  $('world-intro').textContent=key==='dance'?'Different ways I’ve learned to move, perform, and sometimes simply be still.':summaries[key];
- $('dance-world').hidden=key!=='dance';$('simple-world').hidden=true;
+ $('dance-world').hidden=key!=='dance';$('animals-world').hidden=key!=='animals';$('simple-world').hidden=true;
  if(key==='dance')chapter(current);
  if(scroll){$('life-world').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});$('life-world').focus({preventScroll:true})}
 }
@@ -35,5 +35,40 @@ $('dance-prev').addEventListener('click',()=>chapter(current-1));$('dance-next')
 $('dance-shuffle').addEventListener('click',()=>chapter(current+1+Math.floor(Math.random()*5)));
 $('dance-overview-toggle').addEventListener('click',()=>{const open=$('dance-overview').hidden;$('dance-overview').hidden=!open;$('dance-overview-toggle').setAttribute('aria-expanded',String(open));$('dance-overview-toggle').textContent=open?'hide overview':'view all six'});
 root.querySelectorAll('[data-jump]').forEach(b=>b.addEventListener('click',()=>{chapter(Number(b.dataset.jump));$('dance-overview').hidden=true;$('dance-overview-toggle').setAttribute('aria-expanded','false');$('dance-overview-toggle').textContent='view all six';$('dance-chapter').focus({preventScroll:true})}));
+const pandaPlaces={
+ china:{region:'China',title:'China · native range & conservation centers',text:'Wild giant pandas live in mountain forests in Sichuan, Shaanxi, and Gansu. China is also home to the major breeding and research centers that support the global population.',url:'https://www.nationalzoo.si.edu/animals/giant-panda'},
+ washington:{region:'Washington, D.C. · USA',title:'Smithsonian’s National Zoo',text:'Bao Li and Qing Bao live at the National Zoo. Their arrival in 2024 began a new research-and-conservation agreement running through 2034.',url:'https://nationalzoo.si.edu/dcpandas'},
+ sandiego:{region:'San Diego · USA',title:'San Diego Zoo · Panda Ridge',text:'Xin Bao and Yun Chuan live at Panda Ridge, continuing San Diego Zoo Wildlife Alliance’s long-running giant panda conservation partnership.',url:'https://animals.sandiegozoo.org/animals/giant-panda'},
+ berlin:{region:'Berlin · Germany',title:'Zoo Berlin · Panda Garden',text:'Germany’s only giant pandas live at Zoo Berlin. The current panda family includes Meng Meng, Jiao Qing, and the younger twins Leni and Lotti.',url:'https://www.zoo-berlin.de/en/explore-the-zoo/panda-garden'},
+ singapore:{region:'Singapore',title:'River Wonders · Giant Panda Forest',text:'Kai Kai and Jia Jia live at River Wonders. Their first cub, Le Le, was born in Singapore in 2021 and later returned to China.',url:'https://www.mandai.com/en/river-wonders/animals-and-zones/giant-panda.html'}
+};
+const pandaFacts=[
+ 'Scientists still do not have one conclusive explanation for the giant panda’s black-and-white markings.',
+ 'Giant pandas are usually solitary, but they are not silent: they chirp, honk, bleat, chomp, and bark during social interactions.',
+ 'Wild giant pandas live in mountain forests in Sichuan, Shaanxi, and Gansu in central China.',
+ 'Qi Zai is the world’s only captive brown Qinling giant panda — a rare “chocolate panda” whose coloring is linked to a genetic variant.',
+ 'A giant panda can spend much of its waking day eating bamboo because bamboo is abundant but relatively low in nutrients.'
+];
+const elephantFacts=[
+ 'Elephants use very low-frequency rumbles to communicate over long distances — some calls can travel for miles.',
+ 'Asian elephant family groups are typically made up of related females, their female offspring, and immature males.',
+ 'Young elephants learn “herd smarts” by observing and mimicking mothers, aunties, and grandmothers.',
+ 'An Asian elephant pregnancy lasts roughly 21.5–22 months — one of the longest gestation periods among mammals.',
+ 'An elephant’s trunk is not just for feeding: it is also used for smelling, touching, drinking, sound production, greeting, reassurance, and play.'
+];
+let pandaFactIndex=0,elephantFactIndex=0;
+root.querySelectorAll('[data-animal-tab]').forEach(btn=>btn.addEventListener('click',()=>{
+ const key=btn.dataset.animalTab;
+ root.querySelectorAll('[data-animal-tab]').forEach(b=>b.setAttribute('aria-selected',String(b===btn)));
+ $('animal-panel-pandas').hidden=key!=='pandas';$('animal-panel-elephants').hidden=key!=='elephants';
+}));
+root.querySelectorAll('[data-panda-place]').forEach(btn=>btn.addEventListener('click',()=>{
+ const d=pandaPlaces[btn.dataset.pandaPlace];if(!d)return;
+ root.querySelectorAll('[data-panda-place]').forEach(b=>b.classList.toggle('is-active',b===btn));
+ $('panda-place-region').textContent=d.region;$('panda-place-title').textContent=d.title;$('panda-place-text').textContent=d.text;$('panda-place-link').href=d.url;
+}));
+$('panda-fact-button')?.addEventListener('click',()=>{pandaFactIndex=(pandaFactIndex+1)%pandaFacts.length;$('panda-fact').textContent=pandaFacts[pandaFactIndex]});
+$('elephant-fact-button')?.addEventListener('click',()=>{elephantFactIndex=(elephantFactIndex+1)%elephantFacts.length;$('elephant-fact').textContent=elephantFacts[elephantFactIndex]});
 if(location.hash==='#dance')openWorld('dance',false);
+if(location.hash==='#animals')openWorld('animals',false);
 })();
