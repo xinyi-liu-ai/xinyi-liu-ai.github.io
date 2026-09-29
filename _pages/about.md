@@ -121,13 +121,13 @@ latest_posts:
 
 <div class="home-about">
 
-I am a second-year PhD student in Computer Science at **Northeastern University**, advised by [Prof. David A. Smith](https://www.ccs.neu.edu/home/dasmith/).
+<p>I am a second-year PhD student in Computer Science at <strong>Northeastern University</strong>, advised by <a href="https://www.ccs.neu.edu/home/dasmith/">Prof. David A. Smith</a>.</p>
 
-My research focuses on **evaluating and aligning LLMs and AI agents**, particularly how their reasoning, behavior, and interactions with humans remain consistent with human goals and agency. I am broadly interested in **LLM/agent evaluation, alignment and AI safety, structured reasoning and information extraction, and human–AI interaction**.
+<p>My research focuses on <strong>evaluating and aligning LLMs and AI agents</strong>, particularly how their reasoning, behavior, and interactions with humans remain consistent with human goals and agency. I am broadly interested in <strong>LLM/agent evaluation, alignment and AI safety, structured reasoning and information extraction, and human–AI interaction</strong>.</p>
 
-Previously, I conducted research at **Microsoft Research** in the Social Computing group and at **Harvard Medical School** in the [HIDIVE Lab](https://hidivelab.org/team/members/xinyi-liu/), where I was advised by [Prof. Nils Gehlenborg](https://dbmi.hms.harvard.edu/people/nils-gehlenborg). I received my M.S. from **The University of Texas at Austin** and my B.S. in Computer Science and Economics from the **University of Maryland, College Park**, where I worked with [Prof. Zhicheng Liu](https://zcliu.cs.umd.edu/) and [Prof. Hannah Bako](https://hannahbako.com/).
+<p>Previously, I conducted research at <strong>Microsoft Research</strong> in the Social Computing group and at <strong>Harvard Medical School</strong> in the <a href="https://hidivelab.org/team/members/xinyi-liu/">HIDIVE Lab</a>, where I was advised by <a href="https://dbmi.hms.harvard.edu/people/nils-gehlenborg">Prof. Nils Gehlenborg</a>. I received my M.S. from <strong>The University of Texas at Austin</strong> and my B.S. in Computer Science and Economics from the <strong>University of Maryland, College Park</strong>, where I worked with <a href="https://zcliu.cs.umd.edu/">Prof. Zhicheng Liu</a> and <a href="https://hannahbako.com/">Prof. Hannah Bako</a>.</p>
 
-## Current Research
+<h2>Current Research</h2>
 
 <div class="research-grid">
   <div class="research-card">
@@ -150,12 +150,12 @@ Previously, I conducted research at **Microsoft Research** in the Social Computi
   </div>
 </div>
 
-## Open to Collaboration
+<h2>Open to Collaboration</h2>
 
 <div class="collab-callout">
 Our lab welcomes <span class="collab-highlight">visiting students</span> and <span class="collab-highlight">remote undergraduate and master’s researchers</span>. I also welcome collaborations with <span class="collab-highlight">PhD students and researchers in academia and&nbsp;industry</span>.
 </div>
 
-If you are interested in joining, collaborating, or discussing a research idea, feel free to reach out by [email](mailto:liu.xinyi10@northeastern.edu).
+<p>If you are interested in joining, collaborating, or discussing a research idea, feel free to reach out by <a href="mailto:liu.xinyi10@northeastern.edu">email</a>.</p>
 
 </div>
