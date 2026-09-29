@@ -6,6 +6,7 @@ const cards=[...root.querySelectorAll('[data-world]')],tabs=[...root.querySelect
 const data=[["ballet", "Ballet", "Childhood", "Several years of ballet were probably my first introduction to movement as a language.", ["balance", "precision", "grace"]], ["classical", "Chinese Classical Dance", "Childhood", "A different kind of expression, in flowing gestures and the stories they can tell.", ["flow", "expression", "storytelling"]], ["xinjiang", "Xinjiang-style Dance", "Childhood", "Another chapter of childhood, full of rhythm, turns, and expressive movement.", ["rhythm", "expression", "joy"]], ["cheer", "Cheerleading", "Middle School", "A brighter, more energetic chapter: moving together and sharing the excitement.", ["energy", "teamwork", "spirit"]], ["hpop", "H-pop / Girl-group Dance", "Master\u2019s years", "A new rhythm, playful choreography, and the fun of learning something different.", ["rhythm", "confidence", "play"]], ["yoga", "Stillness", "Yoga \u00b7 Now", "Sometimes movement is about learning how to become quiet.", ["breath", "presence", "ease"]]];
 const imageBase=$('dance-image').getAttribute('src').replace(/ballet\.webp.*$/,'');
 let current=0,active=null;
+const paper={animals:'#fffbf3',astronomy:'#fcf5e9',dance:'#fcf6e9',reading:'#fdf9ee',travel:'#fcf5eb',writing:'#fefdf5'};
 const summaries={animals:'A soft spot for pandas and elephants, and curiosity about the lives they lead.',astronomy:'Looking up, learning the sky, and wondering what is out there.',reading:'Fictional worlds to disappear into — in books, animation, comics, and games.',travel:'Exploring new places, landscapes, and cultures.',writing:'Stories of awakening, imagined worlds, and characters finding their way.'};
 function chapter(n,focus=false){
  current=(n+data.length)%data.length;const [key,title,era,story,tags]=data[current];
@@ -27,8 +28,7 @@ function openWorld(key,scroll=true){
  $('dance-world').hidden=key!=='dance';$('animals-world').hidden=key!=='animals';$('astronomy-world').hidden=key!=='astronomy';$('travel-world').hidden=key!=='travel';$('writing-world').hidden=key!=='writing';$('simple-world').hidden=true;
  if(key==='animals'){$('world-title').textContent='Elephants & Pandas';$('world-intro').textContent='A soft spot for panda cubs, elephant calves, and the surprisingly complex lives behind those faces.';}
  if(key==='astronomy')$('world-intro').textContent='Looking up, learning the sky, and collecting tiny reasons to feel small.';
- const artwork=$('world-artwork-image');const original=card.querySelector('img');artwork.src=original.getAttribute('src');artwork.alt=card.querySelector('.life-title').textContent+' — full illustration';$('world-artwork').hidden=false;
- if(key==='writing')$('world-artwork').hidden=true;
+ const artwork=$('world-artwork-image');const original=card.querySelector('img');artwork.src=original.getAttribute('src');artwork.alt=card.querySelector('.life-title').textContent+' — full illustration';$('world-artwork').style.backgroundColor=paper[key]||'';$('world-artwork').hidden=false;
  if(key==='travel')$('world-intro').textContent='Places I’m curious about — and places you think I should see someday.';
  if(key==='dance')chapter(current);
  if(scroll){$('life-world').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});$('life-world').focus({preventScroll:true})}

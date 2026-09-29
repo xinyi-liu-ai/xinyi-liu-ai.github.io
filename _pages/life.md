@@ -100,7 +100,7 @@ nav_order: 3
 <p class="life-ending">Still collecting little worlds. ✦</p>
 </div>
 <noscript><p>Enable JavaScript to explore the movement timeline.</p></noscript>
-<script src="{{ '/assets/js/life.js' | relative_url }}?v=20260929-writing-1" defer></script>
+<script src="{{ '/assets/js/life.js' | relative_url }}?v=20260929-artwork-1" defer></script>
 
 
 <script src="{{ '/assets/js/life-animals.js' | relative_url }}?v=20260929-travel-1" defer></script>
@@ -110,7 +110,7 @@ nav_order: 3
 <script src="{{ '/assets/js/life-sky-data.js' | relative_url }}?v=20260929-1" defer></script>
 <script src="{{ '/assets/js/life-astronomy.js' | relative_url }}?v=20260929-1" defer></script>
 
-<style>.life-book .world-artwork{margin:1rem auto 2rem;padding:0;width:min(100%,720px);border:0;background:none}.life-book .world-artwork img{display:block;width:100%;height:auto;margin:0;object-fit:contain;border:0;border-radius:0;box-shadow:none}</style>
+<style>.life-book .world-artwork{margin:1.2rem 0 2rem;padding:0;width:100%;aspect-ratio:2/1;overflow:hidden;border:0;border-radius:6px;background:#fcf7ec}.life-book .world-artwork img{display:block;width:auto;max-width:100%;height:100%;margin:0 auto;object-fit:contain;border:0;border-radius:0;box-shadow:none;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}@media(max-width:650px){.life-book .world-artwork{aspect-ratio:4/3}}</style>
 
 
 <link rel="stylesheet" href="{{ '/assets/css/life-travel.css' | relative_url }}?v=20260929-1">
