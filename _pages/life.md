@@ -72,6 +72,8 @@ nav_order: 3
 <details class="travel-sources"><summary>Map notes & sources</summary><p>Station locations and attributes: <a href="https://www.comnap.aq/antarctic-facilities-information" target="_blank" rel="noopener noreferrer">COMNAP 2025 · November 2024 facilities list</a>, © COMNAP, educational and non-commercial use. <a href="{{ '/assets/data/life-travel-stations.csv' | relative_url }}">Download source snapshot</a>. Base geography: Natural Earth, public domain. Park descriptions link to NPS, UNESCO, and government sources. Wildlife and ice notes link to the Australian Antarctic Program.</p><p>Visitor recommendations are stored separately from editorial park entries. Only reviewed entries are placed on the public recommendation map.</p></details>
 </div>
 
+<div id="writing-world" hidden></div>
+
 <div id="dance-world" hidden>
 <div class="dance-tools"><button type="button" id="dance-shuffle">shuffle a chapter ✦</button><button type="button" id="dance-overview-toggle" aria-expanded="false" aria-controls="dance-overview">view all six</button></div>
 <div class="dance-timeline" role="tablist" aria-label="Movement chapters">
@@ -98,7 +100,7 @@ nav_order: 3
 <p class="life-ending">Still collecting little worlds. ✦</p>
 </div>
 <noscript><p>Enable JavaScript to explore the movement timeline.</p></noscript>
-<script src="{{ '/assets/js/life.js' | relative_url }}?v=20260929-travel-1" defer></script>
+<script src="{{ '/assets/js/life.js' | relative_url }}?v=20260929-writing-1" defer></script>
 
 
 <script src="{{ '/assets/js/life-animals.js' | relative_url }}?v=20260929-travel-1" defer></script>
@@ -114,3 +116,6 @@ nav_order: 3
 <link rel="stylesheet" href="{{ '/assets/css/life-travel.css' | relative_url }}?v=20260929-1">
 <script src="{{ '/assets/js/life-travel-data.js' | relative_url }}?v=20260929-1" defer></script>
 <script src="{{ '/assets/js/life-travel.js' | relative_url }}?v=20260929-1" defer></script>
+
+<link rel="stylesheet" href="{{ '/assets/css/life-writing.css' | relative_url }}?v=20260929-1">
+<script src="{{ '/assets/js/life-writing.js' | relative_url }}?v=20260929-1" defer></script>
