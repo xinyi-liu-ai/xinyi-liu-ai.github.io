@@ -5,7 +5,7 @@ permalink: /life/
 nav: true
 nav_order: 3
 ---
-<link rel="stylesheet" href="{{ '/assets/css/life.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/life.css' | relative_url }}?v=20260929-animals-2">
 <div class="life-book" id="life-book">
 <p class="life-intro">A few things I love outside research — animals, stars, stories, movement, and exploring the world.</p>
 <div class="life-board" aria-label="Things I love">
@@ -145,4 +145,4 @@ nav_order: 3
 <p class="life-ending">Still collecting little worlds. ✦</p>
 </div>
 <noscript><p>Enable JavaScript to explore the movement timeline.</p></noscript>
-<script src="{{ '/assets/js/life.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/life.js' | relative_url }}?v=20260929-animals-2" defer></script>
