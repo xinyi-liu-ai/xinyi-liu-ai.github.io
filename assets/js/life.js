@@ -24,10 +24,11 @@ function openWorld(key,scroll=true){
  $('life-world').hidden=close;if(close)return;
  const card=cards.find(c=>c.dataset.world===key);$('world-title').textContent=card.querySelector('.life-title').textContent;
  $('world-intro').textContent=key==='dance'?'Different ways I’ve learned to move, perform, and sometimes simply be still.':summaries[key];
- $('dance-world').hidden=key!=='dance';$('animals-world').hidden=key!=='animals';$('astronomy-world').hidden=key!=='astronomy';$('simple-world').hidden=true;
+ $('dance-world').hidden=key!=='dance';$('animals-world').hidden=key!=='animals';$('astronomy-world').hidden=key!=='astronomy';$('travel-world').hidden=key!=='travel';$('simple-world').hidden=true;
  if(key==='animals'){$('world-title').textContent='Elephants & Pandas';$('world-intro').textContent='A soft spot for panda cubs, elephant calves, and the surprisingly complex lives behind those faces.';}
  if(key==='astronomy')$('world-intro').textContent='Looking up, learning the sky, and collecting tiny reasons to feel small.';
  const artwork=$('world-artwork-image');const original=card.querySelector('img');artwork.src=original.getAttribute('src');artwork.alt=card.querySelector('.life-title').textContent+' — full illustration';$('world-artwork').hidden=false;
+ if(key==='travel')$('world-intro').textContent='Places I’m curious about — and places you think I should see someday.';
  if(key==='dance')chapter(current);
  if(scroll){$('life-world').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});$('life-world').focus({preventScroll:true})}
 }
@@ -41,6 +42,8 @@ root.querySelectorAll('[data-jump]').forEach(b=>b.addEventListener('click',()=>{
 if(location.hash==='#dance')openWorld('dance',false);
 if(location.hash==='#animals')openWorld('animals',false);
 if(location.hash==='#astronomy')openWorld('astronomy',false);
+if(location.hash==='#travel')openWorld('travel',false);
 })();
+
 
 
