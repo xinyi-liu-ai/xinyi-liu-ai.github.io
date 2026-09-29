@@ -308,7 +308,7 @@ plugins:
   - al_marimo
   - al_rtl
 
-# Sitemap settings
+# Sitemap settings (curated sitemap is maintained in /sitemap.xml)
 defaults:
   - scope:
       path: "assets"
