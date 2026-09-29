@@ -25,8 +25,9 @@ function openWorld(key,scroll=true){
  const card=cards.find(c=>c.dataset.world===key);$('world-title').textContent=card.querySelector('.life-title').textContent;
  $('world-intro').textContent=key==='dance'?'Different ways I’ve learned to move, perform, and sometimes simply be still.':summaries[key];
  $('dance-world').hidden=key!=='dance';$('animals-world').hidden=key!=='animals';$('astronomy-world').hidden=key!=='astronomy';$('simple-world').hidden=true;
- if(key==='animals'){$('world-title').textContent='Elephants & Pandas';$('world-intro').textContent='';}
+ if(key==='animals'){$('world-title').textContent='Elephants & Pandas';$('world-intro').textContent='A soft spot for panda cubs, elephant calves, and the surprisingly complex lives behind those faces.';}
  if(key==='astronomy')$('world-intro').textContent='Looking up, learning the sky, and collecting tiny reasons to feel small.';
+ const artwork=$('world-artwork-image');const original=card.querySelector('img');artwork.src=original.getAttribute('src');artwork.alt=card.querySelector('.life-title').textContent+' — full illustration';$('world-artwork').hidden=false;
  if(key==='dance')chapter(current);
  if(scroll){$('life-world').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});$('life-world').focus({preventScroll:true})}
 }

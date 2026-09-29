@@ -5,7 +5,7 @@ permalink: /life/
 nav: true
 nav_order: 3
 ---
-<link rel="stylesheet" href="{{ '/assets/css/life.css' | relative_url }}?v=20260929-astronomy-1">
+<link rel="stylesheet" href="{{ '/assets/css/life.css' | relative_url }}?v=20260929-large-art-1">
 <div class="life-book" id="life-book">
 <p class="life-intro">A few things I love outside research — animals, stars, stories, movement, and exploring the world.</p>
 <div class="life-board" aria-label="Things I love">
@@ -18,10 +18,11 @@ nav_order: 3
 </div>
 <section id="life-world" class="life-world" hidden aria-labelledby="world-title" tabindex="-1">
 <div class="world-heading"><div><h2 id="world-title"></h2><p id="world-intro"></p></div><button type="button" id="close-world" aria-label="Close this interest">×</button></div>
+<figure class="world-artwork" id="world-artwork" hidden><img id="world-artwork-image" alt="" decoding="async"></figure>
 <div id="simple-world"></div>
 
 <div id="animals-world" hidden>
-<div class="animal-welcome"><p>A soft spot for panda cubs, elephant calves, and the surprisingly complex lives behind those faces.</p><img src="{{ '/assets/img/life/animal.webp?v=final-20260928' | relative_url }}" alt="Blue elephant and panda illustration" width="800" height="800" loading="lazy"></div>
+
 <div class="animal-tabs" role="tablist" aria-label="Explore animals"><button type="button" id="pandas-tab" role="tab" aria-selected="true" aria-controls="pandas-panel" data-animal="pandas">🐼 Pandas</button><button type="button" id="elephants-tab" role="tab" aria-selected="false" aria-controls="elephants-panel" tabindex="-1" data-animal="elephants">🐘 Elephants</button></div>
 <div id="pandas-panel" role="tabpanel" aria-labelledby="pandas-tab">
 <h3>A few pandas I’m especially fond of</h3><div class="panda-favourites">
@@ -85,12 +86,14 @@ nav_order: 3
 <p class="life-ending">Still collecting little worlds. ✦</p>
 </div>
 <noscript><p>Enable JavaScript to explore the movement timeline.</p></noscript>
-<script src="{{ '/assets/js/life.js' | relative_url }}?v=20260929-astronomy-1" defer></script>
+<script src="{{ '/assets/js/life.js' | relative_url }}?v=20260929-large-art-1" defer></script>
 
 
-<script src="{{ '/assets/js/life-animals.js' | relative_url }}?v=20260929-astronomy-1" defer></script>
+<script src="{{ '/assets/js/life-animals.js' | relative_url }}?v=20260929-large-art-1" defer></script>
 
 
 <link rel="stylesheet" href="{{ '/assets/css/life-astronomy.css' | relative_url }}?v=20260929-1">
 <script src="{{ '/assets/js/life-sky-data.js' | relative_url }}?v=20260929-1" defer></script>
 <script src="{{ '/assets/js/life-astronomy.js' | relative_url }}?v=20260929-1" defer></script>
+
+<style>.life-book .world-artwork{margin:1rem auto 2rem;padding:0;width:min(100%,720px);border:0;background:none}.life-book .world-artwork img{display:block;width:100%;height:auto;margin:0;object-fit:contain;border:0;border-radius:0;box-shadow:none}</style>
