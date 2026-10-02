@@ -117,5 +117,7 @@ nav_order: 3
 <script src="{{ '/assets/js/life-travel-data.js' | relative_url }}?v=20260929-1" defer></script>
 <script src="{{ '/assets/js/life-travel.js' | relative_url }}?v=20260929-1" defer></script>
 
-<link rel="stylesheet" href="{{ '/assets/css/life-writing.css' | relative_url }}?v=20260929-2">
-<script src="{{ '/assets/js/life-writing.js' | relative_url }}?v=20260929-3" defer></script>
+<link rel="stylesheet" href="{{ '/assets/css/life-writing.css' | relative_url }}?v=20261002-1">
+<script src="{{ '/assets/js/life-writing.js' | relative_url }}?v=20261002-1" defer></script>
+<link rel="stylesheet" href="{{ '/assets/css/life-court.css' | relative_url }}?v=20261002-1">
+<script src="{{ '/assets/js/life-court.js' | relative_url }}?v=20261002-1" defer></script>

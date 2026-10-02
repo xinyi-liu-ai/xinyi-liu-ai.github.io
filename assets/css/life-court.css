@@ -1,0 +1,97 @@
+/* Story World II: The Brain Court.
+   Three visual tiers -- world map (100%), department portraits (2 x 48%), story chapters (88-100%) --
+   so the rhythm reads big -> small small -> big -> huge -> huge. */
+#sw-court{--bc-ink:var(--global-text-color,#2f2c3a);--bc-muted:var(--muted,#72717d);--bc-gold:#b08a4f;--bc-paper:var(--global-bg-color,#fff);--bc-cream:#fbf6ec;--bc-night:#1c1a3a;--bc-night-2:#2b2654;--bc-navy:#24305e}
+#sw-court button{border:0;background:none;padding:0;font:inherit;color:inherit}
+#sw-court p{line-height:1.75}
+
+/* zoomable images */
+.bc-zoom{position:relative;display:block;width:100%;border-radius:6px;overflow:hidden;cursor:zoom-in}
+.bc-zoom img{display:block;width:100%;height:auto}
+.bc-zoom-hint{position:absolute;top:.6rem;right:.6rem;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:rgba(255,252,246,.88);color:#3b3050;font-size:.85rem;opacity:0;transition:opacity .2s}
+.bc-zoom:hover .bc-zoom-hint,.bc-zoom:focus-visible .bc-zoom-hint{opacity:1}
+.bc-zoom:focus-visible{outline:2px solid var(--bc-gold);outline-offset:3px}
+
+/* Act I: hero */
+.bc-hero-copy{max-width:620px;margin:1.6rem auto 0;text-align:center}
+.bc-hero-copy h3{font-family:Georgia,serif;font-weight:400;font-size:clamp(1.9rem,4vw,2.6rem);margin:.35rem 0 .6rem}
+.bc-hero-copy p{color:var(--bc-muted);font-size:.95rem;margin:0 0 1rem}
+.bc-scroll{font-size:.78rem!important;letter-spacing:.06em;color:var(--bc-gold)!important;padding:.4rem .3rem!important;animation:bc-nudge 2.6s ease-in-out infinite}
+.bc-scroll:hover{text-decoration:underline}
+
+/* section heads */
+.bc-block{margin:4.5rem 0 0;scroll-margin-top:90px}
+.bc-head{max-width:620px;margin:0 auto 1.6rem;text-align:center}
+.bc-head h4{font-family:Georgia,serif;font-weight:400;font-size:clamp(1.5rem,3vw,1.95rem);margin:.35rem 0 .4rem}
+.bc-head p{color:var(--bc-muted);font-size:.92rem;margin:0}
+
+/* Act II: the four departments */
+.bc-flow{display:flex;flex-wrap:wrap;justify-content:center;gap:.3rem .5rem;list-style:none;margin:-.4rem 0 1.5rem;padding:0;font-size:.72rem;letter-spacing:.04em;color:var(--bc-muted)}
+.bc-flow li+li:before{content:'→';margin-right:.5rem;color:var(--bc-gold)}
+.bc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.6rem 4%;list-style:none;margin:0;padding:0}
+.bc-card{height:100%;background:var(--bc-cream)!important;border-radius:8px;text-align:left;box-shadow:0 1px 2px rgba(60,40,20,.06);transition:transform .25s ease,box-shadow .25s ease}
+.bc-card:hover,.bc-card:focus-visible{transform:translateY(-4px);box-shadow:0 14px 30px rgba(60,40,20,.15)}
+.bc-card img{aspect-ratio:3/2;object-fit:cover}
+.bc-card-cap{display:grid;grid-template-columns:auto 1fr;column-gap:.75rem;align-items:center;padding:.85rem 1rem 1rem}
+.bc-num{grid-row:span 2;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--bc-navy);color:#fff;font-family:Georgia,serif;font-size:.85rem}
+.bc-card-cap strong{font-size:.95rem;line-height:1.3}
+.bc-card-cap small{font-size:.74rem;line-height:1.45;color:var(--bc-muted)}
+.bc-beyond{display:block;margin:2.2rem auto 0;padding:.55rem 1.15rem!important;border:1px solid currentColor!important;border-radius:30px;font-size:.82rem!important;color:var(--bc-gold)!important;transition:background .2s}
+.bc-beyond:hover{background:var(--bc-cream)!important}
+
+/* Act III: daily comic, slightly narrower than the chapters that follow */
+.bc-daily .bc-zoom{width:88%;margin:0 auto}
+.bc-quote{max-width:560px;margin:1.6rem auto 0;text-align:center;font-family:Georgia,serif;font-style:italic;font-size:clamp(1.05rem,2.2vw,1.3rem);line-height:1.6!important}
+
+/* Act IV: the page sinks into the night (full-bleed bands drawn with border-image, so no horizontal scroll) */
+.bc-dusk,.bc-dawn{height:160px}
+.bc-dusk{margin-top:4rem;border-image:linear-gradient(var(--bc-paper),var(--bc-night)) fill 0//0 100vmax}
+.bc-dawn{border-image:linear-gradient(var(--bc-night),var(--bc-paper)) fill 0//0 100vmax}
+.bc-night{margin-top:0;padding:1rem 0 3.5rem;color:#e7e3f3;border-image:linear-gradient(var(--bc-night),var(--bc-night-2) 55%,var(--bc-night)) fill 0//0 100vmax}
+.bc-night .bc-head h4{color:#f3eefc}.bc-night .bc-head p{color:#a9a3c8}.bc-night .sw-eyebrow{color:#d9c08a}
+.bc-night .bc-quote{color:#f3e9d2}
+.bc-night .bc-zoom{box-shadow:0 22px 60px rgba(0,0,0,.45)}
+
+/* Act V: light returns */
+.bc-coord{margin-top:2.5rem}
+
+/* the Meridian Bureau side door */
+.bc-back{font-size:.78rem!important;color:var(--bc-gold)!important;padding:.3rem 0!important}
+.bc-back:hover{text-decoration:underline}
+.bc-back-end{display:block;margin:3rem auto 0}
+.bc-bridge{max-width:620px;margin:1.6rem auto 0;text-align:center}
+.bc-bridge-lead{font-family:Georgia,serif;font-size:1.05rem;color:var(--bc-muted);margin:.6rem 0 1.6rem}
+.bc-bridge h3{font-family:Georgia,serif;font-weight:400;font-size:clamp(1.8rem,4vw,2.4rem);margin:0 0 .5rem}
+.bc-bridge p:last-child{color:var(--bc-muted);font-size:.95rem}
+.bc-steps{display:flex;justify-content:center;gap:.5rem;list-style:none;margin:0 0 .7rem;padding:0;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--bc-muted)}
+.bc-steps li+li:before{content:'→';margin-right:.5rem;opacity:.55}
+.bc-steps .is-on{color:var(--bc-gold);font-weight:600}
+.bc-zh{color:var(--bc-ink)!important;font-size:.98rem!important;margin-bottom:.25rem!important}
+.bc-clock .bc-zoom{width:80%;margin:0 auto}
+.bc-legend{margin-top:5.5rem;padding:3rem 0 3.5rem;border-image:linear-gradient(var(--bc-cream),var(--bc-cream)) fill 0//0 100vmax}
+.bc-legend .bc-zoom{width:76%;margin:0 auto}
+.bc-keepers{margin-top:5.5rem}
+.bc-keepers .bc-zoom{width:90%;margin:0 auto}
+.bc-hint{max-width:540px;margin:-.4rem auto 1.4rem!important;padding:.75rem 1rem;border-radius:6px;background:var(--bc-cream);font-size:.82rem!important;text-align:center}
+.bc-hint strong{display:block;color:var(--bc-gold);margin-bottom:.15rem}
+
+/* lightbox (lives on <body>, outside #sw-court) */
+.bc-lightbox{width:100vw;height:100vh;max-width:none;max-height:none;margin:0;padding:0;border:0;background:transparent;overflow:auto}
+.bc-lightbox::backdrop{background:rgba(20,16,30,.88)}
+.bc-lightbox-inner{display:flex;align-items:center;justify-content:center;min-height:100%;padding:3.2rem 1rem}
+.bc-lightbox img{width:auto;height:auto;max-width:min(96vw,1800px);max-height:86vh;border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,.5);cursor:zoom-in}
+.bc-lightbox.is-actual img{max-width:none;max-height:none;cursor:zoom-out}
+.bc-lightbox-close{position:fixed;top:1rem;right:1rem;width:40px;height:40px;border:0;border-radius:50%;background:rgba(255,255,255,.92);color:#2c2440;font-size:1.4rem;line-height:1;cursor:pointer}
+.bc-lightbox-tip{position:fixed;left:50%;bottom:.8rem;transform:translateX(-50%);margin:0;color:#cfc8dc;font-size:.7rem;letter-spacing:.05em;white-space:nowrap}
+
+@keyframes bc-nudge{50%{transform:translateY(3px)}}
+html[data-theme=dark] #sw-court{--bc-cream:#2a2620;--bc-navy:#3b4a86}
+html[data-theme=dark] .bc-zoom-hint{background:rgba(40,36,50,.85);color:#eee}
+@media(max-width:650px){
+ .bc-grid{grid-template-columns:1fr;gap:1.2rem}
+ .bc-daily .bc-zoom,.bc-clock .bc-zoom,.bc-legend .bc-zoom,.bc-keepers .bc-zoom{width:100%}
+ .bc-block{margin-top:3.2rem}.bc-legend,.bc-keepers{margin-top:3.6rem}
+ .bc-dusk,.bc-dawn{height:100px}
+ .bc-lightbox-tip{display:none}
+}
+@media(prefers-reduced-motion:reduce){.bc-card,.bc-zoom-hint{transition:none}.bc-card:hover{transform:none}.bc-scroll{animation:none}}

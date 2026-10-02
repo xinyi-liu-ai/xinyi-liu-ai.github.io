@@ -2,7 +2,11 @@
 #writing-world{--sw-gold:#b08a4f;--sw-soft:#f7f1e6;--sw-line:var(--global-divider-color,#e8e0d3);--sw-ink:var(--global-text-color,#30303c)}
 #writing-world button{border:0;background:none;padding:0}
 .sw-eyebrow{display:block;text-transform:uppercase;letter-spacing:.14em;font-size:.62rem;color:var(--sw-gold)}
-.sw-shelf{display:flex;gap:1.4rem;margin:.2rem 0 1rem;font-size:.78rem}.sw-shelf b{font-family:Georgia,serif;font-weight:400;color:var(--sw-gold);margin-right:.3rem}.sw-shelf .is-current{font-weight:600}.sw-shelf .is-later{color:var(--muted);opacity:.7}
+.sw-shelf{display:flex;gap:1.4rem;margin:.2rem 0 1rem;font-size:.78rem}.sw-shelf b{font-family:Georgia,serif;font-weight:400;color:var(--sw-gold);margin-right:.3rem}.sw-shelf{gap:1.6rem;margin:.2rem 0 1.4rem;border-bottom:1px solid var(--sw-line)}
+.sw-shelf button{font-size:.82rem!important;padding:.45rem 0 .55rem!important;margin-bottom:-1px;color:var(--muted)!important;border-bottom:2px solid transparent!important;transition:color .2s}
+.sw-shelf button:hover{color:var(--sw-ink)!important}
+.sw-shelf [aria-pressed=true]{color:var(--sw-ink)!important;font-weight:600;border-bottom-color:var(--sw-gold)!important}
+.sw-shelf button:focus-visible{outline:2px solid var(--sw-gold);outline-offset:3px}
 
 /* Hero */
 .sw-hero{position:relative;overflow:hidden;border-radius:6px;color:#fff;aspect-ratio:16/9;min-height:360px;display:flex;align-items:flex-end}

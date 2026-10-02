@@ -48,7 +48,8 @@ const fragments=[
 const sceneHTML=c=>c.imgs.map(([file,alt,pos],j)=>pic(file,alt,pos).replace('<img ',`<img class="${j?'':'is-shown'}" `)).join('')+(c.imgs.length>1?`<div class="sw-scene-switch" role="group" aria-label="Choose a scene">${c.imgs.map((im,j)=>`<button type="button" data-shot="${j}" aria-pressed="${j===0}">${im[3]}</button>`).join('')}</div>`:'');
 
 host.innerHTML=`
-<nav class="sw-shelf" aria-label="Story worlds"><span class="is-current"><b>I</b> Soul &amp; Awakening</span><span class="is-later"><b>II</b> The Court of the Mind <small>· soon</small></span></nav>
+<nav class="sw-shelf" aria-label="Story worlds"><button type="button" data-shelf="soul" aria-pressed="true"><b>I</b> Soul &amp; Awakening</button><button type="button" data-shelf="court" aria-pressed="false"><b>II</b> The Brain Court</button></nav>
+<div id="sw-soul">
 <section class="sw-hero" aria-labelledby="sw-title"><div class="sw-hero-art">${pic('hero.webp','She looks back and smiles at the edge of a sea of clouds, a road of light winding up to the heavenly palace','center')}</div><div class="sw-hero-copy"><span class="sw-eyebrow">Story World I</span><h3 id="sw-title">Soul &amp; Awakening</h3><p>A soul from the heavens is born into a human life, forgets everything, and slowly finds her way back.</p><div class="sw-actions"><button type="button" id="sw-enter">Enter the Story</button><button type="button" class="sw-frag-open">Open a Random Fragment ✦</button></div></div></section>
 <section class="sw-block" id="sw-story" aria-labelledby="sw-story-title"><div class="sw-block-head"><h4 id="sw-story-title">The six realms</h4><button type="button" class="sw-frag-open sw-quiet">open a fragment ✦</button></div>
 <div class="sw-rail" role="tablist" aria-label="Chapters of the story">${chapters.map((c,i)=>`<button type="button" role="tab" id="sw-tab-${c.key}" aria-controls="sw-stage" aria-selected="${i===0}" tabindex="${i===0?0:-1}" data-i="${i}"><span class="sw-han" lang="zh">${c.han}</span><span class="sw-en">${c.en}</span></button>`).join('<span class="sw-arrow" aria-hidden="true">→</span>')}</div>
@@ -63,10 +64,12 @@ host.innerHTML=`
 <button type="button" class="sw-return-node" style="left:10%;top:84%" data-side="right" data-step="experience"><span></span>Human experience</button><button type="button" class="sw-return-node" style="left:50%;top:50%" data-step="integration"><span></span>Soul archive</button><button type="button" class="sw-return-node" style="left:90%;top:16%" data-side="left" data-step="return"><span></span>Higher realm</button>
 <p class="sw-return-step" id="sw-return-step" aria-live="polite">experience → integration → return</p></div>
 <p class="sw-return-line">The heavens can know the idea of pain. Only a human life can bring back its weight.</p></section>
+</div>
+<div id="sw-court" hidden></div>
 <div class="sw-fragment" id="sw-fragment" role="dialog" aria-modal="false" aria-labelledby="sw-frag-tag" hidden><span class="sw-eyebrow" id="sw-frag-tag"></span><p id="sw-frag-text"></p><div><button type="button" id="sw-frag-next">another ✦</button><button type="button" id="sw-frag-close" aria-label="Close fragment">×</button></div></div>`;
 
 const $=id=>document.getElementById(id);
-const tabs=[...host.querySelectorAll('[role=tab]')];let current=0;
+const tabs=[...host.querySelectorAll('.sw-rail [role=tab]')];let current=0;
 function entry(i){const c=chapters[current];[...$('sw-entries').children].forEach((b,j)=>b.setAttribute('aria-expanded',String(j===i)));$('sw-entry-text').textContent=c.entries[i][1]}
 let shotTimer=null;
 function shot(j){$('sw-scene').querySelectorAll('img').forEach((im,k)=>im.classList.toggle('is-shown',k===j));$('sw-scene').querySelectorAll('[data-shot]').forEach((b,k)=>b.setAttribute('aria-pressed',String(k===j)))}
@@ -106,6 +109,16 @@ $('sw-frag-next').addEventListener('click',fragment);
 const closeFrag=()=>{$('sw-fragment').hidden=true;if(opener)opener.focus()};
 $('sw-frag-close').addEventListener('click',closeFrag);
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('sw-fragment').hidden)closeFrag()});
+
+/* story-world shelf: I Soul & Awakening / II The Brain Court (rendered by life-court.js) */
+function shelf(key){
+ host.querySelectorAll('[data-shelf]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.shelf===key)));
+ $('sw-soul').hidden=key!=='soul';$('sw-court').hidden=key!=='court';
+ $('sw-fragment').hidden=true;
+ if(key!=='court'&&/^#(brain-court|meridian-bureau)$/.test(location.hash)){try{history.replaceState(null,'','#writing')}catch(_){}}
+ if(key==='court'&&!/^#(brain-court|meridian-bureau)$/.test(location.hash)){try{history.replaceState(null,'','#brain-court')}catch(_){}}
+}
+host.querySelectorAll('[data-shelf]').forEach(b=>b.addEventListener('click',()=>shelf(b.dataset.shelf)));
 
 chapter(0);realm('bureau');bond('true');
 })();
