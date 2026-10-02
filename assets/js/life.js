@@ -7,7 +7,7 @@ const data=[["ballet", "Ballet", "Childhood", "Several years of ballet were prob
 const imageBase=$('dance-image').getAttribute('src').replace(/ballet\.webp.*$/,'');
 let current=0,active=null;
 const paper={animals:'#fffbf3',astronomy:'#fcf5e9',dance:'#fcf6e9',reading:'#fdf9ee',travel:'#fcf5eb',writing:'#fefdf5'};
-const summaries={animals:'A soft spot for pandas and elephants, and curiosity about the lives they lead.',astronomy:'Looking up, learning the sky, and wondering what is out there.',reading:'Fictional worlds to disappear into — in books, animation, comics, and games.',travel:'Exploring new places, landscapes, and cultures.',writing:'Stories of awakening, imagined worlds, and characters finding their way.'};
+const summaries={animals:'A soft spot for pandas and elephants, and curiosity about the lives they lead.',astronomy:'Looking up, learning the sky, and wondering what is out there.',reading:'Worlds I enter, questions I follow, and ideas I carry with me.',travel:'Exploring new places, landscapes, and cultures.',writing:'Stories of awakening, imagined worlds, and characters finding their way.'};
 function chapter(n,focus=false){
  current=(n+data.length)%data.length;const [key,title,era,story,tags]=data[current];
  tabs.forEach((t,i)=>{t.setAttribute('aria-selected',String(i===current));t.tabIndex=i===current?0:-1});
@@ -25,7 +25,7 @@ function openWorld(key,scroll=true){
  $('life-world').hidden=close;if(close)return;
  const card=cards.find(c=>c.dataset.world===key);$('world-title').textContent=card.querySelector('.life-title').textContent;
  $('world-intro').textContent=key==='dance'?'Different ways I’ve learned to move, perform, and sometimes simply be still.':summaries[key];
- $('dance-world').hidden=key!=='dance';$('animals-world').hidden=key!=='animals';$('astronomy-world').hidden=key!=='astronomy';$('travel-world').hidden=key!=='travel';$('writing-world').hidden=key!=='writing';$('simple-world').hidden=true;
+ $('dance-world').hidden=key!=='dance';$('animals-world').hidden=key!=='animals';$('astronomy-world').hidden=key!=='astronomy';$('travel-world').hidden=key!=='travel';$('writing-world').hidden=key!=='writing';$('reading-world').hidden=key!=='reading';$('simple-world').hidden=true;
  if(key==='animals'){$('world-title').textContent='Elephants & Pandas';$('world-intro').textContent='A soft spot for panda cubs, elephant calves, and the surprisingly complex lives behind those faces.';}
  if(key==='astronomy')$('world-intro').textContent='Looking up, learning the sky, and collecting tiny reasons to feel small.';
  const artwork=$('world-artwork-image');const original=card.querySelector('img');artwork.src=original.getAttribute('src');artwork.alt=card.querySelector('.life-title').textContent+' — full illustration';$('world-artwork').style.backgroundColor=paper[key]||'';$('world-artwork').hidden=false;
@@ -45,6 +45,7 @@ if(location.hash==='#animals')openWorld('animals',false);
 if(location.hash==='#astronomy')openWorld('astronomy',false);
 if(location.hash==='#travel')openWorld('travel',false);
 if(location.hash==='#writing')openWorld('writing',false);
+if(location.hash==='#reading')openWorld('reading',false);
 })();
 
 

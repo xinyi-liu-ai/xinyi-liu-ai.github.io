@@ -72,6 +72,8 @@ nav_order: 3
 <details class="travel-sources"><summary>Map notes & sources</summary><p>Station locations and attributes: <a href="https://www.comnap.aq/antarctic-facilities-information" target="_blank" rel="noopener noreferrer">COMNAP 2025 · November 2024 facilities list</a>, © COMNAP, educational and non-commercial use. <a href="{{ '/assets/data/life-travel-stations.csv' | relative_url }}">Download source snapshot</a>. Base geography: Natural Earth, public domain. Park descriptions link to NPS, UNESCO, and government sources. Wildlife and ice notes link to the Australian Antarctic Program.</p><p>Visitor recommendations are stored separately from editorial park entries. Only reviewed entries are placed on the public recommendation map.</p></details>
 </div>
 
+<div id="reading-world" hidden></div>
+
 <div id="writing-world" data-img="{{ '/assets/img/life/writing/' | relative_url }}" hidden></div>
 
 <div id="dance-world" hidden>
@@ -100,7 +102,7 @@ nav_order: 3
 <p class="life-ending">Still collecting little worlds. ✦</p>
 </div>
 <noscript><p>Enable JavaScript to explore the movement timeline.</p></noscript>
-<script src="{{ '/assets/js/life.js' | relative_url }}?v=20260929-artwork-1" defer></script>
+<script src="{{ '/assets/js/life.js' | relative_url }}?v=20261002-reading-1" defer></script>
 
 
 <script src="{{ '/assets/js/life-animals.js' | relative_url }}?v=20260929-travel-1" defer></script>
@@ -121,3 +123,5 @@ nav_order: 3
 <script src="{{ '/assets/js/life-writing.js' | relative_url }}?v=20261002-1" defer></script>
 <link rel="stylesheet" href="{{ '/assets/css/life-court.css' | relative_url }}?v=20261002-1">
 <script src="{{ '/assets/js/life-court.js' | relative_url }}?v=20261002-1" defer></script>
+<link rel="stylesheet" href="{{ '/assets/css/life-reading.css' | relative_url }}?v=20261002-1">
+<script src="{{ '/assets/js/life-reading.js' | relative_url }}?v=20261002-1" defer></script>
