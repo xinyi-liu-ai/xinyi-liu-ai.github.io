@@ -18,3 +18,12 @@
 .tiny-things{border-top:0;margin:2.5rem 0 0}.tiny-pair span{font-family:Georgia,serif;font-size:1.15rem;line-height:1.6}.tiny-pair strong{letter-spacing:.12em;text-transform:uppercase;font-size:.6rem}
 html[data-theme=dark] #animals-world{--animal-soft:#26372d;--animal-green:#a9c3ac}html[data-theme=dark] .map-canvas svg{background:#26322c}html[data-theme=dark] .map-land{fill:#526656;stroke:#26322c}html[data-theme=dark] .panda-favourites img{background:#26322c}
 @media(max-width:650px){.panda-favourites{gap:1.5rem}.panda-favourites article{grid-template-columns:125px 1fr}.panda-favourites img{aspect-ratio:1}.panda-favourites h4{margin:0 0 .3rem!important;font-size:.95rem!important}.panda-favourites p{font-size:.73rem!important}.panda-map-layout{grid-template-columns:1fr;gap:.5rem}.animal-welcome{grid-template-columns:1fr 75px}.animal-welcome img{width:75px}.animal-welcome p{font-size:.85rem!important}.animal-facts{grid-template-columns:1fr}.animal-fact>button{min-height:65px}.maria-feature,.elephant-family{grid-template-columns:1fr}.tiny-pair span{font-size:1rem}.map-canvas svg{height:240px}}
+
+.maria-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+  align-items: start;
+  gap: .8rem;
+  margin-bottom: 2rem;
+}
+.maria-gallery img { display: block; width: 100%; height: auto; }
